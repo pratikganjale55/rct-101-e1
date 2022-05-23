@@ -1,3 +1,14 @@
 .task {
-  /* Sample  */
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: space-around;
+  padding: 10px;
+  background-color: rgb(241, 232, 232);
+}
+
+
+.task input {
+ height: 15px;
+ width: 15px;
+ border-radius: 100px;
 }

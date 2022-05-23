@@ -9,8 +9,10 @@ const TaskHeader = () => {
   // NOTE: do not delete `data-cy` key value pair
   return (
     <div data-cy="task-header" className={styles.taskHeader}>
-      <b data-cy="header-remaining-task">{unCompletedTask}</b>
-      <b data-cy="header-total-task">{totalTask}</b>
+      <h1>To-Do List</h1>
+       <b data-cy="header-remaining-task">You have {unCompletedTask}</b> of  <b data-cy="header-total-task">{totalTask}</b> task remaining
+      
+     
     </div>
   );
 };
