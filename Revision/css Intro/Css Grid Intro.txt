@@ -1,0 +1,29 @@
+GRID ,FLEX :
+
+Using Grid and flex display in css that makes ui more fancy as well as responsive.
+making responsive that doesn't means fit layout in all media of scrren it's means fit edge of the browser.
+ we have other external source to make fancy and responsive but that have more complex html and js code .
+for example boostrap , for making ui that have nested loop html and js program , but using grid and flex 
+not only making fancy but also make it accessible.
+most of time layout is one dimensional, but its developer responsibility to make its two dimensional.
+it possible by using grid. what grid css do, layout fit all medium but it can manage layout of different screen with design.
+grid have grid container, item, line, cell, track, gap that makes ui fancy and easy to use.
+css grid means you can use proper grid and system for your designs.
+
+make its accessible .
+make it user friendly,
+make it fancy,
+make sure the fancy doesn't means break accessibility.
+
+
+When to use grid when to use flex?
+
+flex - flex can use when we want to create one dimensional layout.
+grid - grid can use when we want to craete two dimensional layout.
+
+flex force us to create html cluster in the form of wrapper
+suppose navbar display property have flex its shows components in one dimesional but
+ that's not happens in every layout some of them shows cluster, but its not proper design
+we can use grid at small screen. 
+
+when we should use grid and flex its depend on ui layout and medium. 

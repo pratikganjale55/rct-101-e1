@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        /* background: ; */
+        margin: 10%;
+        padding: 20px;
+        grid-template:"a b"
+                       "c d"
+                       "e f"
+                       "g g" ;
+    }
+    .container div{
+        background-color: yellow;
+        text-align: center;
+    }
+    #item1{
+       grid-area: a;
+       
+       /* background-image: url("https://compass-ssl.microsoft.com/assets/f9/4c/f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png"); */
+
+    }
+   img {
+        height: 400px;
+        width: 90%;
+        margin: 3%;
+        /* object-fit: cover; */
+    }
+    #item2{
+       grid-area: b;
+    }
+    #item3{
+       grid-area: c;
+    }
+    #item4{
+       grid-area: d;
+    }
+    #item5{
+       grid-area: e;
+    }
+    #item6{
+       grid-area: f;
+    }
+    #item7{
+       grid-area: g;
+    }
+    #item7 img {
+        height: 400px;
+        width: 60%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+    @media only screen and (max-width: 480px) {
+       .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background-color: blue;
+        grid-template: "a" 
+                       "b"
+                       "c"
+                        "d"
+                       "e"
+                        "f"
+                        "g";
+       }    
+    }
+    @media (min-width: 481px) and (max-width: 767px) {
+           .container {
+            
+            grid-template: "a" 
+                       "b"
+                       "c"
+                        "d"
+                       "e"
+                        "f"
+                        "g";
+       }    
+      
+        }
+</style>
+<body>
+    <div class="container">
+        <div id="item1"><img src="https://image.shutterstock.com/image-photo/text-portfolio-on-brown-paper-260nw-387456811.jpg"/></div>
+        <div id="item2"><img src="http://salomeanjari.com/wp-content/uploads/2018/04/19cc14d4-9a45-47fc-97e8-6e59bc3a3e30.jpg"/></div>
+        <div id="item3"><img src="https://elements-cover-images-0.imgix.net/97c4cb64-38d6-4cbd-b30c-a648399f9cff?auto=compress%2Cformat&fit=max&w=710&s=6361224284ab7470209f48cb68a3fb5b"/></div>
+        <div id="item4"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/03c5b098170599.5ed64a5b2b134.jpg"/></div>
+        <div id="item5"><img src="https://cdn.dribbble.com/users/5542520/screenshots/14329285/media/c69320779b1398227f26bc6cc3971471.png?compress=1&resize=400x300&vertical=top"/></div>
+        <div id="item6"><img src="https://cdn.dribbble.com/users/2982887/screenshots/10946343/content_4x.jpg"/></div>
+        <div id="item7"><img src="https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/07/Apple-maps-app.png"/></div>
+
+    </div>
+</body>
+</html>
