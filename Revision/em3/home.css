@@ -1,0 +1,294 @@
+.navbarSection{
+    height: auto;
+    width:auto;
+    /* border: 1px solid black; */
+    background-image: url("https://www.dhresource.com/0x0/f2/albu/g6/M00/CC/E9/rBVaR1us2_-AAWv3AAY730xTRM0815.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   background-color: rgba(0, 0, 0, 0.9);
+   transform: scale(1);
+}
+.navbarSecondDiv{
+    height: auto;
+    width: auto;
+    /* border: 1px solid black; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.navbarDiv{
+    display: flex;
+    height: 60px;
+    width: auto;
+    
+    /* border: 1px solid black; */
+}
+.navbarImg {
+    margin-left: 10%;
+}
+.navbarImg img {
+    height: 60px;
+    width: 100px;
+    
+}
+.introidDiv{
+    height :auto ;
+    width: auto;
+    /* border: 1px solid white; */
+    padding: auto;
+
+}
+.textDiv {
+    height: auto;
+    width: auto;
+   color: white;
+    text-align: center;
+    padding: 9%;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+.textDiv button {
+    padding: 10px;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    color: white;
+   
+}
+.buttonFlex{
+    display: flex;
+    margin-left: 40%;
+}
+.button1 {
+    background-color:rgb(139, 6, 6);
+}
+.button2 {
+    background-color: transparent;
+}
+
+/* work css */
+
+.gridWorkContainer{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto auto auto ;
+        
+        border: 1px solid black; 
+        margin: 10%;
+        padding: 20px;
+        background-color: #2196F3;
+       
+        grid-template-areas:"a a b "
+                            "c d b" ;
+}
+.gridWorkContainer div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+#item1 { 
+    grid-area: a;
+}
+#item2 {
+    grid-area:b ;
+}
+#item3 {
+    grid-area: c;
+}
+#item4 {
+    grid-area: d;
+}
+.gridWorkContainer div img {
+    height: 100%;
+    width: 100%;
+}
+.workHeading{
+    margin-top: 10%;
+    padding-top: 2%;
+}
+.workHeading h1 {
+    text-align: center;
+    color: rgb(4, 51, 51);
+}
+
+/* // appartment section css // */
+
+.appartment{
+    height: auto;
+    width: 100%;
+    padding-bottom: 4%;
+    background-color: rgb(228, 225, 225);
+
+}
+.flex1  {
+    display: flex;
+    margin: 3%;
+
+}
+.flex2  {
+    display: flex;
+    margin: 3%;
+
+}
+.flex1 .div{
+    
+    width: 100% ;
+}
+.flex1 div img {
+    height: 300px ;
+    width: 400px;
+}
+.flex2 div img {
+    height: 300px ;
+    width: 400px;
+}
+
+
+/* //// post task css // */
+
+.postGridConatiner{
+    display: grid;
+    grid-template-columns: repeat(2 , 2fr);
+    /* grid-templat/e-rows: auto; */
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 10%;
+    
+}
+.postGridConatiner h3{
+    text-align: center;
+}
+.postGridConatiner div{
+    
+    padding: 10px;
+}
+
+.postFlexDiv {
+
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    margin: 10px;
+}
+.postFlexDiv img {
+    height: 80px;
+    width: 50px;
+}
+.postFlexDiv p {
+    margin-left: 10px;
+}
+
+.postRightDiv img{
+    height: 70px;
+    width: 30%;
+}
+
+
+/* // media qeury// */
+
+/* // medium screen // */
+@media only screen and (max-width: 768px){
+    .navbarSection{
+        height: auto;
+        width: 100%;
+    }
+    .navbarSecondDiv{
+        height: auto;
+        width: 100%;
+    }
+    .navbarSecondDiv{
+        height: auto;
+        width: 100%;
+    }
+    .buttonFlex{
+        display: block;
+        margin-left: auto;
+    }
+    /* .gridWorkContainer{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: auto   ;
+        
+        /* border: 1px solid black;  */
+        margin: 10%;
+        padding: 20px;
+        background-color: #2196F3;
+       
+        grid-template-areas:"a a  "
+                            "c d "
+                            "b b" ;
+}
+.appartment{
+    display: flex;
+    height: auto;
+    width: 100%;
+    /* padding-bottom: 4%; */
+    justify-content:center
+}
+.flex1  {
+    display: block;
+    /* margin: 3%; */
+    margin-left: 30%;
+    /* justify-content:space-around */
+
+}
+.flex2  {
+    display: block;
+    margin: 3%;
+
+} */
+}
+/* // small section // */
+@media only screen and (min-width: 600px){
+    .navbarSection{
+        height: auto;
+        width: 100%;
+    }
+    .navbarSecondDiv{
+        height: auto;
+        width: 100%;
+    }
+    .navbarSecondDiv{
+        height: auto;
+        width: 100%;
+    }
+    .buttonFlex{
+        display: block;
+        margin-left: auto;
+    }
+
+    .gridWorkContainer{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: auto  auto auto ;
+        
+        border: 1px solid black; 
+        margin-left: 10%;
+        padding: 20px;
+        background-color: #2196F3;
+       
+        grid-template-areas:"a "
+                            "b "
+                            "c"
+                            "d" ;
+}
+.flex1  {
+    display: block;
+    margin: 3%;
+
+}
+.flex2  {
+    display: block;
+    margin: 3%;
+
+}
+
+.postGridConatiner{
+    display: block;
+    grid-template-columns: repeat(2 , 2fr);
+    /* grid-templat/e-rows: auto; */
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 10%;
+    
+}
+
+}

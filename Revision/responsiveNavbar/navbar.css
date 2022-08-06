@@ -1,0 +1,105 @@
+.navbarDi{
+    display: flex;
+
+    height: 80px;
+    width: 100%;
+    letter-spacing: 2px;
+     position: static;
+    
+    /* border: 1px solid black; */
+}
+
+.navbarDi div{
+    padding: 8px;
+    /* border: 1px solid black; */
+}
+.imageDiv{
+    margin-top: 1%;
+    margin-left: 12%;
+    cursor: pointer;
+}
+.rightDiv {
+    display: flex;
+    width: 55%;
+    margin-left: 10%;
+    justify-content: space-around;
+    margin-right: 10%;
+}
+.rightDiv div {
+    text-align: justify;
+    
+    margin-top: 2px;
+    cursor: pointer;
+}
+.rightDiv div:hover {
+    background-color:#fff2f2;
+    border-radius: 6px;
+   color: #CC0000;
+}
+.loginDiv {
+    background-color:#fff2f2;
+    border-radius: 6px;
+    border: 3px solid #CC0000 ;
+    
+}
+.loginDiv:hover {
+    background-color: #FFB3B3;
+    border: 3px solid #FFB3B3;
+}
+#childDiv{
+    margin-top: 1.5%;
+}
+.courses{
+    margin-top: 1.2%;
+}
+.show {
+    display: none;
+}
+
+#dropDownDiv{
+    
+    display: none;
+    height: auto;
+    width: 18%;
+    background-color: #fffdfd ;
+    border-radius: 3%;
+    /* border: 1px solid black; */
+    margin-left: 30% ;
+}
+#dropDownDiv div h3 {
+    margin-left: 1%;
+}
+.subCompText{
+    margin-left: 7%;
+}
+.show {
+    display: block;
+}
+.icon {
+    display: none;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px){
+    .navbarDi {
+        display: block;
+        height: auto;
+        width: auto;
+    }
+
+    .rightDiv{
+        display: block;
+    }
+    #dropDownDiv{
+        width: auto;
+    }
+    .icon {
+        display: block;
+        text-decoration: none;
+    }
+    .imageDiv{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+}
