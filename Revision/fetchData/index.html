@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="buttonDiv">
+        <button onclick="topComments()">Top 10 comments</button>
+        <button>Latest 10 comments </button>
+    </div>
+    
+    
+    <div id="displayGrid">
+        <!-- <div></div> -->
+    </div>
+</body>
+</html>
+<script>
+    
+    
+    let url ;
+    for(let i=0; i<=5; i++){
+
+        url = "https://jsonmock.hackerrank.com/api/articles?page=i" ;
+
+     async function fetchData(){
+        
+       
+            try{  const res = await fetch(url)
+                const data =await res.json()
+                var final = data.data
+                //  console.log(data.data)
+                appendData(final)
+            }
+            catch(err){
+                console.log(err)
+            }
+
+            }
+            fetchData() 
+    }
+    
+    
+    
+
+ let container = document.getElementById("displayGrid")
+    function appendData(data){
+        
+        
+        data.forEach(function(elem)  {
+            console.log(elem)
+            var div = document.createElement("div");
+   
+            var name = document.createElement("h2");
+            name.innerText = elem.title;
+
+            var div1 = document.createElement("div")
+            div1.setAttribute("id", "flexDiv")
+           
+
+            var image = document.createElement("img");
+            image.src = "https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png";
+            image.setAttribute("id", "imageSize") ;
+
+            var author = document.createElement("h1") ;
+            author.innerText = elem.author ;
+
+            div1.append(image, author)
+
+            var div2 = document.createElement("div")
+            div2.setAttribute("id", "flexDivBottom")
+           
+           
+            
+            var comments = document.createElement("h1");
+            comments.innerText = elem.num_comments ;
+
+            var text = document.createElement("h4");
+            text.innerText = "Go to Article";
+            text.style.cursor = "pointer"
+            text.addEventListener("click",myFunction(elem))
+
+            div2.append(comments,text)
+
+            div.append(div1,name,div2);
+            container.append(div);
+            
+        })
+        
+    }
+
+    function myFunction(elem) {
+        console.log(elem)
+    }
+
+   async function topComments(){
+        let url ;
+    for(let i=0; i<=5; i++){
+
+        url = "https://jsonmock.hackerrank.com/api/articles?page=i" ;
+
+     
+       
+            try{  const res = await fetch(url)
+                const data =await res.json()
+                var final = data.data
+                var sort = final.sort((a,b) => a.num_comments-b.num_comments)
+                //  console.log(data.data)
+                appendData(sort)
+            }
+            catch(err){
+                console.log(err)
+            }
+
+          
+    }
+    }
+    
+</script>

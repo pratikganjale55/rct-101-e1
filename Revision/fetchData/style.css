@@ -1,0 +1,47 @@
+#displayGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    /* background-color: yellow; */
+    padding: 20px;
+}
+#displayGrid div {
+    padding: 20px;
+    background-color: white;
+    /* border: 1px solid black; */
+}
+#displayGrid div h2{
+    color: teal;
+}
+#imageSize{
+height: 70px;
+width: 70px;
+}
+
+#flexDiv{
+    display: flex;
+
+}
+#flexDiv h1 {
+    margin-left: 10%;
+}
+
+#flexDivBottom{
+    display: flex;
+    justify-content: space-between;
+}
+#commImage{
+    height: 20px;
+    width: 20px;
+}
+.buttonDiv{
+    margin-left: 30%;
+    padding: 3%;
+}
+.buttonDiv button{
+    height: 40px;
+    width: 200px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
