@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rubricContainer">
+        <div class="upperTopDiv">
+              <h1 id="timer">99</h1>
+              <h1>0</h1>
+              <div>
+                <h2>45</h2>
+                <p>Tiles Left</p>
+              </div>
+             
+        </div>
+        <div class="middleMainContainer">
+            <div class="middleTopFlex">
+                 <div class="flexChild">
+                    <div>
+                        <h1 onclick="getA()" class="a">A</h1>
+                        <p>1</p>
+                    </div>
+                    <div class="useDiv">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                 </div>
+                 <div class="flexChild">
+                    <div>
+                        <h1 onclick="getE()" class="e">E</h1>
+                        <p>1</p>
+                    </div>
+                    <div class="useDiv">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                 <div class="flexChild">
+                    <div>
+                        <h1 onclick="getI()" class="i">I</h1>
+                        <p>1</p>
+                    </div>
+                    <div class="useDiv">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>   
+                </div>
+                 <div class="flexChild">
+                    <div>
+                        <h1 onclick="getO()" class="o">O</h1>
+                        <p>1</p>
+                    </div>
+                    <div class="useDiv">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>   
+                </div>
+                 <div class="flexChild">
+                    <div>
+                        <h1 onclick="getU()" class="u">U</h1>
+                        <p>1</p>
+                    </div>
+                    <div class="useDiv">
+                        
+                    </div>   
+                </div>
+            </div>
+            
+        </div>
+        <div class="gridContainer">
+            
+        </div>
+       <div class="bottomDiv"></div>
+
+       <div class="displayDiv">
+          <div class="displayFlex">
+               <div>
+                <p>Delete</p>
+               </div>
+               <div>
+                <h1 id="wordInput"></h1>
+               </div>
+               <div>
+                <p>save</p>
+               </div>
+          </div>
+       </div>
+
+       <div class="backSpace">
+        <p>BackSpace</p>
+       </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+  // timer 
+
+  var time = document.getElementById("timer") ;
+
+  var timerSet = 99;
+  var countRemain = setInterval(() => {
+     if(timerSet <= 0){
+        clearInterval(countRemain)
+     }
+     time.innerHTML = timerSet ;
+     timerSet -= 1 ;
+  }, 1000)
+
+
+
+   var grid = document.getElementsByClassName("gridContainer") ;  
+   
+  var wordArr = [] ;
+
+  function getA() {
+         let a =  document.getElementsByClassName("a").value ;
+         wordArr.push(a)
+         console.log(a)
+  }
+  function getE() {
+         let e =  document.getElementsByClassName("e").innerText ;
+         wordArr.push(e)
+  }
+  function getI() {
+         let i =  document.getElementsByClassName("i").innerText ;
+         wordArr.push(i)
+  }
+  function getO() {
+         let o=  document.getElementsByClassName("o").innerText ;
+         wordArr.push(o)
+  }
+  function getU() {
+         let u =  document.getElementsByClassName("u").innerText ;
+         wordArr.push(u)
+  }
+    function getLetters() {
+
+        var count = 99 ;
+       let timer = setInterval(() => {
+            if(count == 0){
+                clearInterval(timer)
+            }
+            count -= 1 ;
+        }, 1000)
+            console.log(count)
+   
+
+           
+            var aplaphate = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
+            
+            var arr = ["A", "E", "I", "O", "U"]
+            var newArr = [] ;
+            // for(var i=0; i<aplaphate.length; i++){
+            //     var letters = aplaphate[Math.floor(Math.random()*aplaphate.length)] ;
+            //    obj[letters] = letters
+            // }
+              var i=0 ;
+              while( arr.length < 20){
+                var letters = aplaphate[Math.floor(Math.random()*aplaphate.length)] ;
+                if(!arr.includes(letters)){
+                    arr.push(letters)
+                }
+                i++ ;
+              }
+            
+             for(var j=0; j<arr.length; j++){
+                if(arr[j] !== "A" && arr[j] !== "E" && arr[j] !== "I" && arr[j] !== "O" && arr[j] !== "U"){
+                    newArr.push(arr[j])
+                }
+             }
+            //  console.log(newArr)
+            
+            var grid = document.querySelector(".gridContainer") ;
+
+            var word = document.querySelector("#wordInput");
+            
+            newArr.map((ele,index) => {
+                
+                var bag = "" ;
+                var outerDiv = document.createElement("div") ;
+
+                 var div = document.createElement("div") ;
+                 div.setAttribute("id", "innerGridDiv") ;
+                 div.addEventListener("click", function(){
+                    let val = div.h1 ;
+                    wordArr.push(ele)
+                    console.log(wordArr) ;
+                    document.getElementById("wordInput").innerText = wordArr.join("")
+                    // setData() ;
+                 })
+             
+                 var h1 = document.createElement("h1");
+                 h1.innerText = ele ;
+                 var value = (Math.random()*3) + 1;
+                 var p = document.createElement("p");
+                 p.innerText = value.toFixed(0) ;
+                 
+                 var bottomDiv = document.createElement("div") ;
+                 bottomDiv.setAttribute("class", "useDiv1")
+                 if(ele == "H" || ele =="P" || ele == "Q" || ele == "T" || ele == "B" || ele == "U") {
+                        var div1 = document.createElement("div") ;
+                        var div2 = document.createElement("div") ;
+                        var div3 = document.createElement("div") ;
+                        bottomDiv.append(div1, div2, div3) ;
+                 }else if(ele == "X" || ele == "Y" || ele == "Z" || ele == "V" || ele == "W"){
+                    
+                 }else {
+                    var div1 = document.createElement("div") ;
+                        var div2 = document.createElement("div") ;
+                        bottomDiv.append(div1, div2) ;
+                 
+                 }
+                 
+                       
+                 div.append(h1, p) ;
+                 
+                 outerDiv.append(div, bottomDiv) ;
+                  grid.append(outerDiv) ;
+               
+                 
+           })
+
+           
+
+    }
+
+    getLetters() 
+    
+</script>

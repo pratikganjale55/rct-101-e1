@@ -1,0 +1,111 @@
+.rubricContainer{
+    
+    width: 40%;
+    margin-left:5% ;
+    /* border: 1px solid black; */
+}
+.upperTopDiv{
+    display: flex;
+    padding: 1%;
+    /* border: 1px solid black; */
+    background-color: rgb(7, 90, 90);
+    color: white;
+    justify-content: space-around;
+}
+.middleMainContainer{
+    /* border: 1px solid black; */
+    background-color: rgb(25, 143, 143);
+    
+}
+.middleTopFlex{
+    display: flex;
+    
+    justify-content: space-around;
+}
+.flexChild{
+    
+    width: 11%;
+    text-align: center;
+    /* border: 1px solid black; */
+
+}
+.flexChild div{
+    color: white;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    background-color: rgb(9, 61, 61);
+}
+.flexChild p {
+    text-align: end;
+}
+.useDiv{
+    /* border: 5px solid white; */
+    display: block;
+    
+}
+.useDiv div{
+    margin: 5%;
+    padding: 1px;
+    background-color: rgb(218, 211, 211);
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 11%);
+   
+    /* border: 1px solid black; */
+    padding: 10px;
+   
+    gap : 10%;
+    justify-content: space-around;
+    background-color: rgb(25, 143, 143);
+}
+.gridContainer div{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(9, 61, 61);
+    /* border: 1px solid black; */
+    
+}
+.useDiv1{
+   display: block;
+}
+.useDiv1 div{
+    margin: 5%;
+    padding: 1px;
+    background-color: rgb(233, 229, 229);
+}
+#innerGridDiv {
+    text-align: center;
+}
+#innerGridDiv p{
+    text-align: end;
+}
+.bottomDiv{
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgb(25, 143, 143);
+}
+
+.displayDiv{
+    
+    width: 100%;
+    border: 1px solid black;
+}
+.displayFlex{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+   color: rgb(124, 11, 11);
+   background-color: rgb(39, 230, 230);
+}
+.displayFlex div{
+    cursor: pointer;
+}
+.backSpace{
+    background-color: rgb(6, 44, 44);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+}
