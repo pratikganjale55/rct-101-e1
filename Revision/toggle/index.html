@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .toggleStyle{
+        width: 50%;
+        padding: 25%;
+        background-color: rgb(139, 236, 236);
+        box-sizing: border-box;
+    }
+  
+</style>
+<body>
+    <button id="throtling">throtling</button>
+   
+</body>
+</html>
+
+<script>
+        // let count= 0 ;
+        // let setApi;
+        // const btn = document.getElementById("throtling");
+        // const throttler = (fun, delay) => {
+        //     if(setApi) return ;
+        //     setApi = true ;
+        //     setTimeout(() => {
+        //        fun()
+        //        setApi = false ;
+        //     }, delay)
+        // }
+        // btn.addEventListener("click", throttler(() => {
+        //     console.log("click", count++)
+        // },500))
+
+
+
+        const apiUrl = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products";
+
+      async function getData(url) {
+    
+            const response = await fetch(url);
+            var data = await response.json();
+            console.log(data);
+    
+}
+getData(apiUrl);
+
+</script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="navbarDi">
+
+        <div class="imageDiv">
+            <img src="https://www.masaischool.com/img/navbar/logo.svg"/>
+            <a href="" style="font-size:30px;" class="icon" >&#9776;</a>
+        </div>
+        
+        <div class="rightDiv">
+              
+                <div class="courses">COURSES <i style="font-size:26px" class="fa">&#xf107;</i></div>
+                
+                <div id="childDiv">FEES & ISA</div>
+                <div id="childDiv">ABOUT US</div>
+                <div id="childDiv">HIRE FROM US</div>
+                <div id="childDiv">FAQ</div>
+                <div class="loginDiv">
+                    <div>LOGIN</div>
+                </div>
+        </div>
+
+       
+    </div>
+    <div id="dropDownDiv">
+         <div>
+              <h3>Full Time</h3>
+              <div class="subCompText">
+                <h5>Full Stack Web Development</h5>
+                <p>30 Weeks | 18 - 28 Yrs | Online</p>
+              </div>
+         </div>
+         <div>
+              <h3 >Part Time</h3>
+              <div class="subCompText">
+                <h5>Full Stack Web Development</h5>
+                <p>30 Weeks | 18 - 28 Yrs | Online</p>
+              </div>
+                  
+         </div>
+         
+        
+    </div>
+</body>
+</html>
+
+<script>
+
+
+   const courses = document.querySelector(".courses")
+   courses.addEventListener("click", function() {
+        const dropDiv = document.querySelector("#dropDownDiv").style.display = "block"
+   })
+   courses.addEventListener("dblclick", function() {
+        const dropDiv = document.querySelector("#dropDownDiv").style.display = "none"
+   })
+
+   var navbar = document.querySelector(".rightDiv")
+// icon function //
+
+let icon = document.querySelector(".icon")
+
+   
+  
+
+  
+
+ 
+
+  
+
+
+
+  var width = screen.availWidth ;
+  if(width <= 600){
+    
+
+    icon.addEventListener("click", function(event){
+    event.preventDefault()
+    navbar.style.display = "block"
+    // console.log("hello2")
+    flag = false
+    })
+
+    // dropdown hide //
+    navbar.style.display = "none"
+    // console.log(width)
+   courses.addEventListener("click", function() {
+    
+       var dropCall = document.querySelector("#dropDownDiv")
+       document.querySelector("#dropDownDiv").style.display = "block"
+       courses.append(dropCall)
+   })
+
+   courses.addEventListener("dblclick", function() {
+        const dropDiv = document.querySelector("#dropDownDiv").style.display = "none"
+   })
+  }
+
+
+   
+
+</script>
